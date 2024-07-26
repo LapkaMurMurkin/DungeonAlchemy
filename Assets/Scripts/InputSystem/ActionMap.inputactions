@@ -1,0 +1,34 @@
+{
+    "name": "ActionMap",
+    "maps": [
+        {
+            "name": "Fight",
+            "id": "22496e16-aadf-4948-be9d-1e2242a35ca3",
+            "actions": [
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "3101181c-b037-489e-917b-ed4dd226686d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e232fc3a-f7aa-4d96-8119-a25a9a348186",
+                    "path": "<Keyboard>/w",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
