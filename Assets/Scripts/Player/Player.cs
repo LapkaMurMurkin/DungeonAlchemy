@@ -4,42 +4,64 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
+using R3;
 
 public class Player : MonoBehaviour
 {
-    [SerializeField]
-    private Animator _animator;
-    [SerializeField]
-    private Weapon _weapon;
+    private PlayerModel _playerModel;
+    private PlayerView _playerView;
+
+    public string Name => _playerModel.Name;
+    public ReadOnlyReactiveProperty<int> MaxHealth => _playerModel.MaxHealth;
+    public ReadOnlyReactiveProperty<int> CurrentHealth => _playerModel.CurrentHealth;
+    public ReadOnlyReactiveProperty<int> AttackDamage => _playerModel.AttackDamage;
+    public ReadOnlyReactiveProperty<float> AttackSpeed => _playerModel.AttackSpeed;
+
+    private PlayerFSM _FSM;
 
     [SerializeField]
     private Enemy _enemy;
 
-    private InputAction _attack;
-
     public void Initialize()
     {
-        _attack = ServiceLocator.Get<ActionMap>().Fight.Attack;
-        _attack.performed += Attack;
-        _weapon.OnDamageDeal += SendDamage;
+        _playerModel = new PlayerModel();
+
+        _playerModel.Name = "MegaWarrior";
+        _playerModel.MaxHealth = new ReactiveProperty<int>(100);
+        _playerModel.CurrentHealth = new ReactiveProperty<int>(MaxHealth.CurrentValue);
+        _playerModel.AttackDamage = new ReactiveProperty<int>(8);
+        _playerModel.AttackSpeed = new ReactiveProperty<float>(1f);
+
+        _playerView = GetComponent<PlayerView>();
+        _playerView.Initialize(this);
+
+        _FSM = new PlayerFSM(this);
+        _FSM.InitializeState(new PlayerFSMState_Idle(_FSM));
+        _FSM.InitializeState(new PlayerFSMState_DefaultAttack(_FSM));
+        _FSM.InitializeState(new PlayerFSMState_ShieldUp(_FSM));
+        _FSM.InitializeState(new PlayerFSMState_ShieldDown(_FSM));
+
+
+        _FSM.SwitchState<PlayerFSMState_Idle>();
     }
 
-    private void OnDisable()
+    private void Update()
     {
-        _attack.performed -= Attack;
-        _weapon.OnDamageDeal -= SendDamage;
+        _FSM.Update();
     }
 
-    private void Attack(InputAction.CallbackContext context)
+    private void SendDamage()
     {
-        _animator.Play("Attack");
-        Debug.Log("Attack");
-    }
-
-    private void SendDamage(int damage)
-    {
-        _enemy.ReceiveDamage(damage);
+        _enemy.TakeDamage(AttackDamage.CurrentValue);
         Debug.Log("SendDamage");
-        Debug.Log(damage);
+        Debug.Log(AttackDamage);
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (_FSM.CurrentState is PlayerFSMState_ShieldUp)
+            return;
+
+        _playerModel.CurrentHealth.Value -= damage;
     }
 }

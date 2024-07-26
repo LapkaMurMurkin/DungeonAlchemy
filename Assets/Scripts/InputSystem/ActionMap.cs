@@ -35,6 +35,15 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Defence"",
+                    ""type"": ""Button"",
+                    ""id"": ""09839625-3511-4353-a32a-5561772607c4"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -48,6 +57,17 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
                     ""action"": ""Attack"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""801019c3-3be1-4104-84fb-1cfc4d8b8cf0"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Defence"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -57,6 +77,7 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
         // Fight
         m_Fight = asset.FindActionMap("Fight", throwIfNotFound: true);
         m_Fight_Attack = m_Fight.FindAction("Attack", throwIfNotFound: true);
+        m_Fight_Defence = m_Fight.FindAction("Defence", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -119,11 +140,13 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     private readonly InputActionMap m_Fight;
     private List<IFightActions> m_FightActionsCallbackInterfaces = new List<IFightActions>();
     private readonly InputAction m_Fight_Attack;
+    private readonly InputAction m_Fight_Defence;
     public struct FightActions
     {
         private @ActionMap m_Wrapper;
         public FightActions(@ActionMap wrapper) { m_Wrapper = wrapper; }
         public InputAction @Attack => m_Wrapper.m_Fight_Attack;
+        public InputAction @Defence => m_Wrapper.m_Fight_Defence;
         public InputActionMap Get() { return m_Wrapper.m_Fight; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -136,6 +159,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Attack.started += instance.OnAttack;
             @Attack.performed += instance.OnAttack;
             @Attack.canceled += instance.OnAttack;
+            @Defence.started += instance.OnDefence;
+            @Defence.performed += instance.OnDefence;
+            @Defence.canceled += instance.OnDefence;
         }
 
         private void UnregisterCallbacks(IFightActions instance)
@@ -143,6 +169,9 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
             @Attack.started -= instance.OnAttack;
             @Attack.performed -= instance.OnAttack;
             @Attack.canceled -= instance.OnAttack;
+            @Defence.started -= instance.OnDefence;
+            @Defence.performed -= instance.OnDefence;
+            @Defence.canceled -= instance.OnDefence;
         }
 
         public void RemoveCallbacks(IFightActions instance)
@@ -163,5 +192,6 @@ public partial class @ActionMap: IInputActionCollection2, IDisposable
     public interface IFightActions
     {
         void OnAttack(InputAction.CallbackContext context);
+        void OnDefence(InputAction.CallbackContext context);
     }
 }

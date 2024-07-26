@@ -10,7 +10,7 @@ public class BillboardUI : MonoBehaviour
 
     public virtual void Initialize()
     {
-        //_playerCameraTransform = ServiceLocator.Get<PlayerCamera>().transform;
+        _playerCameraTransform = ServiceLocator.Get<PlayerCamera>().transform;
 
         this.LateUpdateAsObservable().Subscribe(_ => RotateToCamera()).AddTo(this);
     }

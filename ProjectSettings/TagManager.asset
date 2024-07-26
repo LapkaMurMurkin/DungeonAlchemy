@@ -8,10 +8,10 @@ TagManager:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - 2DPreUI
   - Water
   - UI
-  - 
+  - 2DPostUI
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: UI
+    uniqueID: 915874775
+    locked: 0
+  - name: 2DPostUI
+    uniqueID: 2185738839
     locked: 0

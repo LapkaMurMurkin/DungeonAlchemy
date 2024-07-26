@@ -9,6 +9,7 @@ public class GameplaySceneLoader : MonoBehaviour
     private ActionMap _actionMap;
 
     private Player _player;
+    private PlayerCamera _playerCamera;
 
     private Enemy _enemy;
 
@@ -22,6 +23,10 @@ public class GameplaySceneLoader : MonoBehaviour
 
         _player = FindObjectOfType<Player>();
         _player.Initialize();
+        ServiceLocator.Register<Player>(_player);
+
+        _playerCamera = FindObjectOfType<PlayerCamera>();
+        ServiceLocator.Register<PlayerCamera>(_playerCamera);
 
         _enemy = FindObjectOfType<Enemy>();
         _enemy.Initialize();
