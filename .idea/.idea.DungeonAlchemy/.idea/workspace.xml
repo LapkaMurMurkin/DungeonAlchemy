@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="f3df9d2d-d8fb-4883-8a72-8627cee2af01" name="Changes" comment="merge11" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/Microsoft.Bcl.TimeProvider.8.0.1/Icon.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/Microsoft.Bcl.TimeProvider.8.0.1/Icon.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/Icon.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/Icon.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/R3.nuspec.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/R3.nuspec.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/R3.nuspec.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/R3.nuspec.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.dll.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.dll.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.dll.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.dll.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/System.Threading.Channels.8.0.0/buildTransitive/net6.0.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/System.Threading.Channels.8.0.0/buildTransitive/net6.0.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Scenes/Gameplay.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Scenes/Gameplay.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Scenes/Gameplay.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Scenes/Gameplay.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameplaySceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Templates/FollowCursorUI.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Scripts/Templates/MVVM.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.r3@378fa771fc/Runtime/MonoBehaviourExtensions.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.r3@378fa771fc/Runtime/UnityTimeProvider.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="2jmUL0F5LIBUW7XAQQliZgUXZP2" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="autoscrollToSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Discover.Launch.Via.Unity": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="Q:\Programs\Unity\Editors\2022.3.37f1-x86_64\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath Q:\UnityDevelopment\DungeonAlchemy -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="Q:\UnityDevelopment\DungeonAlchemy" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="f3df9d2d-d8fb-4883-8a72-8627cee2af01" name="Changes" comment="" />
+      <created>1721991726450</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1721991726450</updated>
+      <workItem from="1721991780998" duration="4787000" />
+    </task>
+    <task id="LOCAL-00001" summary="working">
+      <created>1721993839992</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1721993839992</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="master" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="working" />
+    <MESSAGE value="merge" />
+    <MESSAGE value="merge11" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge11" />
+  </component>
+</project>
