@@ -25,4 +25,16 @@ public class EnemyView : MonoBehaviour
         _enemy.MaxHealth.Subscribe(value => _healthBar.maxValue = value).AddTo(this);
         _enemy.CurrentHealth.Subscribe(value => _healthBar.value = value).AddTo(this);
     }
+
+    public void Hide()
+    {
+        _healthBar.gameObject.SetActive(false);
+        _name.gameObject.SetActive(false);
+    }
+
+    public void Show()
+    {
+        _healthBar.gameObject.SetActive(true);
+        _name.gameObject.SetActive(true);
+    }
 }

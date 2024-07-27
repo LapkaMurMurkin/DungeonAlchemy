@@ -10,6 +10,7 @@ public class PlayerFSMState_Idle : PlayerFSMState
 
     public override void Enter()
     {
+        _FSM.Animator.Play("Idle");
         _FSM.Attack.performed += MakeDefaultAttack;
         _FSM.Defence.performed += ShieldUp;
     }
@@ -22,13 +23,17 @@ public class PlayerFSMState_Idle : PlayerFSMState
 
     private void MakeDefaultAttack(InputAction.CallbackContext context)
     {
-        _FSM.Animator.Play("Attack");
         _FSM.SwitchState<PlayerFSMState_DefaultAttack>();
     }
 
     private void ShieldUp(InputAction.CallbackContext context)
     {
-        _FSM.Animator.Play("ShieldUp");
         _FSM.SwitchState<PlayerFSMState_ShieldUp>();
+    }
+
+    public override void Update()
+    {
+        if (_FSM.Player._enemy == null)
+            _FSM.SwitchState<PlayerFSMState_Move>();
     }
 }

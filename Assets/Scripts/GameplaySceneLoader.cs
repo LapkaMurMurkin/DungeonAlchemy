@@ -8,10 +8,12 @@ public class GameplaySceneLoader : MonoBehaviour
 
     private ActionMap _actionMap;
 
+    private Road _road;
+
     private Player _player;
     private PlayerCamera _playerCamera;
 
-    private Enemy _enemy;
+    private Enemy[] _enemys;
 
     private void Awake()
     {
@@ -21,6 +23,9 @@ public class GameplaySceneLoader : MonoBehaviour
         _actionMap.Enable();
         ServiceLocator.Register<ActionMap>(_actionMap);
 
+        _road = FindObjectOfType<Road>();
+        ServiceLocator.Register<Road>(_road);
+
         _player = FindObjectOfType<Player>();
         _player.Initialize();
         ServiceLocator.Register<Player>(_player);
@@ -28,8 +33,9 @@ public class GameplaySceneLoader : MonoBehaviour
         _playerCamera = FindObjectOfType<PlayerCamera>();
         ServiceLocator.Register<PlayerCamera>(_playerCamera);
 
-        _enemy = FindObjectOfType<Enemy>();
-        _enemy.Initialize();
+        _enemys = FindObjectsOfType<Enemy>();
+        foreach (Enemy enemy in _enemys)
+            enemy.Initialize();
     }
 }
 

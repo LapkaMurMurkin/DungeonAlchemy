@@ -12,7 +12,8 @@ public class PlayerFSMState_ShieldDown : PlayerFSMState
 
     public override void Enter()
     {
-        _timer = 0.3f;
+        _FSM.Animator.Play("ShieldDown");
+        _timer = _FSM.ShieldDownTime;
     }
 
     public override void Exit()
@@ -23,7 +24,6 @@ public class PlayerFSMState_ShieldDown : PlayerFSMState
     public override void Update()
     {
         _timer -= Time.deltaTime;
-        Debug.Log(_timer);
 
         if (_timer <= 0)
         {

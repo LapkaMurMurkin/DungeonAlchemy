@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using R3;
+using R3.Triggers;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -8,24 +9,23 @@ public class Enemy : MonoBehaviour
     private EnemyModel _enemyModel;
     private EnemyView _enemyView;
 
+    public string InitializeName;
     public string Name => _enemyModel.Name;
     public ReadOnlyReactiveProperty<int> MaxHealth => _enemyModel.MaxHealth;
     public ReadOnlyReactiveProperty<int> CurrentHealth => _enemyModel.CurrentHealth;
     public ReadOnlyReactiveProperty<int> AttackDamage => _enemyModel.AttackDamage;
     public ReadOnlyReactiveProperty<float> AttackSpeed => _enemyModel.AttackSpeed;
 
-    private Animator _animator;
+    private EnemyFSM _FSM;
 
     [SerializeField]
-    private Player _player;
-
-    private Coroutine _makeDefaultAttackRoutine;
+    public Player _player;
 
     public void Initialize()
     {
         _enemyModel = new EnemyModel();
 
-        _enemyModel.Name = "RandomEnemy";
+        _enemyModel.Name = InitializeName;
         _enemyModel.MaxHealth = new ReactiveProperty<int>(100);
         _enemyModel.CurrentHealth = new ReactiveProperty<int>(MaxHealth.CurrentValue);
         _enemyModel.AttackDamage = new ReactiveProperty<int>(12);
@@ -34,12 +34,14 @@ public class Enemy : MonoBehaviour
         _enemyView = GetComponent<EnemyView>();
         _enemyView.Initialize(this);
 
-        _animator = GetComponent<Animator>();
-    }
+        _FSM = new EnemyFSM(this, _enemyModel, _enemyView);
+        _FSM.InitializeState(new EnemyFSMState_Idle(_FSM));
+        _FSM.InitializeState(new EnemyFSMState_Fight(_FSM));
 
-    private void Start()
-    {
-        _animator.Play("OgreAttack");
+        _FSM.SwitchState<EnemyFSMState_Idle>();
+
+        this.UpdateAsObservable().Subscribe(_ => _FSM.Update()).AddTo(this);
+        this.OnDestroyAsObservable().Subscribe(_ => _FSM.CurrentState.Exit()).AddTo(this);
     }
 
     private void SendDamage()
@@ -50,5 +52,12 @@ public class Enemy : MonoBehaviour
     public void TakeDamage(int damage)
     {
         _enemyModel.CurrentHealth.Value -= damage;
+
+        if (CurrentHealth.CurrentValue <= 0)
+        {
+            _enemyView.Hide();
+            //_player._enemy = null;
+            Destroy(this.gameObject);
+        }
     }
 }

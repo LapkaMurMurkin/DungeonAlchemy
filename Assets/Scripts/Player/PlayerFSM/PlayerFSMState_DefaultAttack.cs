@@ -12,7 +12,8 @@ public class PlayerFSMState_DefaultAttack : PlayerFSMState
 
     public override void Enter()
     {
-        _timer = 1;
+        _FSM.Animator.SetTrigger("Attack");
+        _timer = _FSM.AttackTime;
     }
 
     public override void Exit()

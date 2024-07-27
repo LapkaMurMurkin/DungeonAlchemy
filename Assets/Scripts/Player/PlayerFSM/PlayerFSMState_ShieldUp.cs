@@ -12,7 +12,8 @@ public class PlayerFSMState_ShieldUp : PlayerFSMState
 
     public override void Enter()
     {
-        _timer = 0.5f;
+        _FSM.Animator.SetTrigger("ShieldUp");
+        _timer = _FSM.ShieldUpTime + 0.2f;
     }
 
     public override void Exit()
@@ -26,7 +27,6 @@ public class PlayerFSMState_ShieldUp : PlayerFSMState
 
         if (_timer <= 0)
         {
-            _FSM.Animator.Play("ShieldDown");
             _FSM.SwitchState<PlayerFSMState_ShieldDown>();
         }
     }
