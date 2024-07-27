@@ -10,4 +10,7 @@ public class PlayerModel
     public ReactiveProperty<int> CurrentHealth;
     public ReactiveProperty<int> AttackDamage;
     public ReactiveProperty<float> AttackSpeed;
+
+    public Tile PositionOnRoad;
+    public Enemy TargetEnemy;
 }

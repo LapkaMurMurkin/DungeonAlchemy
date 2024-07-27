@@ -9,9 +9,6 @@ public class PlayerFSM : FSM
 {
     public Player Player;
     public PlayerModel PlayerModel;
-    public List<Tile> Road;
-    public int PlayerPosition;
-
     public Animator Animator;
 
     public InputAction Attack;
@@ -26,8 +23,7 @@ public class PlayerFSM : FSM
     {
         Player = player;
         PlayerModel = playerModel;
-        Road = ServiceLocator.Get<Road>().Tiles;
-        PlayerPosition = Road.FindIndex(tile => tile.Player == Player);
+
         Animator = Player.gameObject.GetComponent<Animator>();
 
         Attack = ServiceLocator.Get<ActionMap>().Fight.Attack;

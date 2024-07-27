@@ -4,9 +4,9 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
 
-public class PlayerFSMState_Idle : PlayerFSMState
+public class PlayerFSMState_Fight : PlayerFSMState
 {
-    public PlayerFSMState_Idle(PlayerFSM FSM) : base(FSM) { }
+    public PlayerFSMState_Fight(PlayerFSM FSM) : base(FSM) { }
 
     public override void Enter()
     {
@@ -33,7 +33,7 @@ public class PlayerFSMState_Idle : PlayerFSMState
 
     public override void Update()
     {
-        if (_FSM.Player._enemy == null)
+        if (_FSM.PlayerModel.TargetEnemy == null)
             _FSM.SwitchState<PlayerFSMState_Move>();
     }
 }

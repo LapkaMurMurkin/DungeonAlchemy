@@ -10,35 +10,43 @@ public class PlayerFSMState_Move : PlayerFSMState
 {
     public PlayerFSMState_Move(PlayerFSM FSM) : base(FSM) { }
 
-    private Player _player;
     private List<Tile> _road;
+    private Tile _playerPosition;
     private Transform _playerTransform;
+    private Transform _forwardTileTransform;
 
     public override void Enter()
     {
-        _player = _FSM.Player;
-        _road = _FSM.Road;
-        _playerTransform = _player.transform;
+        _road = ServiceLocator.Get<Road>().Tiles;
+        _playerPosition = _FSM.PlayerModel.PositionOnRoad;
+        _playerTransform = _FSM.Player.transform;
+        _forwardTileTransform = _playerPosition.NextTile.transform;
     }
 
     public override void Exit() { }
 
     public override void Update()
     {
-        if (_playerTransform.position.z != _road[_FSM.PlayerPosition + 1].transform.position.z)
+        if (_playerPosition.NextTile.Enemy != null)
         {
-            _playerTransform.position = Vector3.MoveTowards(_playerTransform.position, _road[_FSM.PlayerPosition + 1].transform.position, 2 * Time.deltaTime);
+            _FSM.PlayerModel.TargetEnemy = _playerPosition.NextTile.Enemy;
+            _FSM.SwitchState<PlayerFSMState_Fight>();
+        }
+
+        if (_playerTransform.position.z != _forwardTileTransform.position.z)
+        {
+            _playerTransform.position = Vector3.MoveTowards(_playerTransform.position, _forwardTileTransform.position, 2 * Time.deltaTime);
         }
         else
         {
-            _road[_FSM.PlayerPosition].Player = null;
-            _FSM.PlayerPosition++;
-            _road[_FSM.PlayerPosition].Player = _FSM.Player;
+            _playerPosition.Player = null;
+            _playerPosition = _playerPosition.NextTile;
+            _FSM.PlayerModel.PositionOnRoad = _playerPosition;
+            _playerPosition.Player = _FSM.Player;
 
-            if (_road[_FSM.PlayerPosition + 1].Enemy is not null)
-                _FSM.Player._enemy = _road[_FSM.PlayerPosition + 1].Enemy;
-
-            _FSM.SwitchState<PlayerFSMState_Idle>();
+            _forwardTileTransform = _playerPosition.NextTile.transform;
         }
+
+        
     }
 }

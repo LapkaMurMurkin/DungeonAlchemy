@@ -8,7 +8,9 @@ public class EnemyModel
     public string Name;
     public ReactiveProperty<int> MaxHealth;
     public ReactiveProperty<int> CurrentHealth;
-
     public ReactiveProperty<int> AttackDamage;
     public ReactiveProperty<float> AttackSpeed;
+
+    public Tile PositionOnRoad;
+    public Player TargetPlayer;
 }

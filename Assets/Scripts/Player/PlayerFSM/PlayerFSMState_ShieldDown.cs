@@ -27,7 +27,7 @@ public class PlayerFSMState_ShieldDown : PlayerFSMState
 
         if (_timer <= 0)
         {
-            _FSM.SwitchState<PlayerFSMState_Idle>();
+            _FSM.SwitchState<PlayerFSMState_Fight>();
         }
     }
 }

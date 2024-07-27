@@ -18,9 +18,6 @@ public class Enemy : MonoBehaviour
 
     private EnemyFSM _FSM;
 
-    [SerializeField]
-    public Player _player;
-
     public void Initialize()
     {
         _enemyModel = new EnemyModel();
@@ -46,7 +43,7 @@ public class Enemy : MonoBehaviour
 
     private void SendDamage()
     {
-        _player.TakeDamage(AttackDamage.CurrentValue);
+        _enemyModel.TargetPlayer.TakeDamage(AttackDamage.CurrentValue);
     }
 
     public void TakeDamage(int damage)
@@ -56,7 +53,6 @@ public class Enemy : MonoBehaviour
         if (CurrentHealth.CurrentValue <= 0)
         {
             _enemyView.Hide();
-            //_player._enemy = null;
             Destroy(this.gameObject);
         }
     }

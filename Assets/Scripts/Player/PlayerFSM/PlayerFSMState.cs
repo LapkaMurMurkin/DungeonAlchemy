@@ -5,11 +5,10 @@ using UnityEngine;
 
 public abstract class PlayerFSMState : FSMState
 {
-    protected new PlayerFSM _FSM
-    {
-        get => (PlayerFSM)base._FSM;
-        set => base._FSM = value;
-    }
+    protected PlayerFSM _FSM;
 
-    public PlayerFSMState(PlayerFSM FSM) : base(FSM) { }
+    public PlayerFSMState(PlayerFSM FSM) : base()
+    {
+        _FSM = FSM;
+    }
 }

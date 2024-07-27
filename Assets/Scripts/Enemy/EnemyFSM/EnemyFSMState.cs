@@ -5,11 +5,9 @@ using UnityEngine;
 
 public abstract class EnemyFSMState : FSMState
 {
-    protected new EnemyFSM _FSM
-    {
-        get => (EnemyFSM)base._FSM;
-        set => base._FSM = value;
-    }
+    protected EnemyFSM _FSM;
 
-    public EnemyFSMState(EnemyFSM FSM) : base(FSM) { }
+    public EnemyFSMState(EnemyFSM FSM) : base() {
+        _FSM = FSM;
+     }
 }

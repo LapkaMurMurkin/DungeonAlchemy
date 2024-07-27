@@ -23,7 +23,7 @@ public class EnemyFSMState_Idle : EnemyFSMState
     {
         if (_FSM.Road[_FSM.PositionOnRoad - 1].Player is not null)
         {
-            _FSM.Enemy._player = _FSM.Road[_FSM.PositionOnRoad - 1].Player;
+            _FSM.EnemyModel.TargetPlayer = _FSM.Road[_FSM.PositionOnRoad - 1].Player;
             _FSM.SwitchState<EnemyFSMState_Fight>();
         }
     }

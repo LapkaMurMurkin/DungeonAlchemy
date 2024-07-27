@@ -24,6 +24,7 @@ public class GameplaySceneLoader : MonoBehaviour
         ServiceLocator.Register<ActionMap>(_actionMap);
 
         _road = FindObjectOfType<Road>();
+        _road.Initialize();
         ServiceLocator.Register<Road>(_road);
 
         _player = FindObjectOfType<Player>();
