@@ -7,6 +7,7 @@ public class Tile : MonoBehaviour
     public Tile NextTile;
     public Tile PreviousTile;
 
-    public Enemy Enemy;
-    public Player Player;
+    public Character Character;
+/*     public Enemy Enemy;
+    public Player Player; */
 }

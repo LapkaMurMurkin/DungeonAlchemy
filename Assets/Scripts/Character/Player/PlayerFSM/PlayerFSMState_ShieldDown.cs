@@ -12,22 +12,16 @@ public class PlayerFSMState_ShieldDown : PlayerFSMState
 
     public override void Enter()
     {
-        _FSM.Animator.Play("ShieldDown");
-        _timer = _FSM.ShieldDownTime;
+        _FSM.AnimatorEvents.OnAnimationEnd += EndDefense;
     }
 
     public override void Exit()
     {
-
+        _FSM.AnimatorEvents.OnAnimationEnd -= EndDefense;
     }
 
-    public override void Update()
+    private void EndDefense()
     {
-        _timer -= Time.deltaTime;
-
-        if (_timer <= 0)
-        {
-            _FSM.SwitchState<PlayerFSMState_Fight>();
-        }
+        _FSM.SwitchState<PlayerFSMState_Fight>();
     }
 }

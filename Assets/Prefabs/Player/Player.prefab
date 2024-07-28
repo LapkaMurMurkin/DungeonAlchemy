@@ -162,6 +162,7 @@ GameObject:
   - component: {fileID: 9074526515000754337}
   - component: {fileID: 7906568600286096200}
   - component: {fileID: 5200103348755088669}
+  - component: {fileID: 5777150993027898092}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -197,7 +198,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f928e5c9de02c77408bd7a19a7c4b44d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 0}
 --- !u!114 &7906568600286096200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,6 +233,18 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &5777150993027898092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2734275020682094741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50ab7c0354588664fae2e5949247df7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &7094735808440545933
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,10 +320,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1920, y: 1080}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3

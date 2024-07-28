@@ -21,9 +21,9 @@ public class EnemyFSMState_Idle : EnemyFSMState
 
     public override void Update()
     {
-        if (_FSM.Road[_FSM.PositionOnRoad - 1].Player is not null)
+        if (_FSM.Road[_FSM.PositionOnRoad - 1].Character is not null)
         {
-            _FSM.EnemyModel.TargetPlayer = _FSM.Road[_FSM.PositionOnRoad - 1].Player;
+            _FSM.Model.TargetCharacter = _FSM.Road[_FSM.PositionOnRoad - 1].Character;
             _FSM.SwitchState<EnemyFSMState_Fight>();
         }
     }

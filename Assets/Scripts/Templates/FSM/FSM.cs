@@ -11,6 +11,12 @@ public class FSM : IFSM
 
     public virtual void InitializeState(IFSMState state)
     {
+        if (_states.ContainsKey(state.GetType()))
+        {
+            Debug.LogError("This condition has already been registered ");
+            return;
+        }
+
         _states.Add(state.GetType(), state);
     }
 
@@ -19,7 +25,10 @@ public class FSM : IFSM
         Type type = typeof(T);
 
         if (CurrentState?.GetType() == type)
+        {
+            Debug.LogError("Already in this state.");
             return;
+        }
 
         if (_states.TryGetValue(type, out IFSMState newState))
         {
@@ -27,6 +36,8 @@ public class FSM : IFSM
             CurrentState = newState;
             CurrentState.Enter();
         }
+        else
+            Debug.LogError("This condition is not registered.");
     }
 
     public virtual void Update()

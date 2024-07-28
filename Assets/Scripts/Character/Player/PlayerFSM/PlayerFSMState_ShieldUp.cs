@@ -8,26 +8,19 @@ public class PlayerFSMState_ShieldUp : PlayerFSMState
 {
     public PlayerFSMState_ShieldUp(PlayerFSM FSM) : base(FSM) { }
 
-    private float _timer;
-
     public override void Enter()
     {
+        _FSM.AnimatorEvents.OnShieldUp += StartDefense;
         _FSM.Animator.SetTrigger("ShieldUp");
-        _timer = _FSM.ShieldUpTime + 0.2f;
     }
 
     public override void Exit()
     {
-
+        _FSM.AnimatorEvents.OnShieldUp -= StartDefense;
     }
 
-    public override void Update()
+    private void StartDefense()
     {
-        _timer -= Time.deltaTime;
-
-        if (_timer <= 0)
-        {
-            _FSM.SwitchState<PlayerFSMState_ShieldDown>();
-        }
+        _FSM.SwitchState<PlayerFSMState_Defense>();
     }
 }

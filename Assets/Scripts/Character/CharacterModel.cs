@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using R3;
 
-public class EnemyModel
+public abstract class CharacterModel
 {
     public string Name;
     public ReactiveProperty<int> MaxHealth;
@@ -12,5 +12,5 @@ public class EnemyModel
     public ReactiveProperty<float> AttackSpeed;
 
     public Tile PositionOnRoad;
-    public Player TargetPlayer;
+    public Character TargetCharacter;
 }

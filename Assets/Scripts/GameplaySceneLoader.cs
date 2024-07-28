@@ -27,16 +27,16 @@ public class GameplaySceneLoader : MonoBehaviour
         _road.Initialize();
         ServiceLocator.Register<Road>(_road);
 
+        _enemys = FindObjectsOfType<Enemy>();
+        foreach (Enemy enemy in _enemys)
+            enemy.Initialize();
+
         _player = FindObjectOfType<Player>();
         _player.Initialize();
         ServiceLocator.Register<Player>(_player);
 
         _playerCamera = FindObjectOfType<PlayerCamera>();
         ServiceLocator.Register<PlayerCamera>(_playerCamera);
-
-        _enemys = FindObjectsOfType<Enemy>();
-        foreach (Enemy enemy in _enemys)
-            enemy.Initialize();
     }
 }
 
