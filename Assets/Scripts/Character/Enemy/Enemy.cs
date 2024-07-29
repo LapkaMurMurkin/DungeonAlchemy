@@ -7,6 +7,10 @@ using UnityEngine;
 public class Enemy : Character
 {
     public string InitializeName;
+    public int InitializeHealth;
+    public int InitializeDamage;
+
+    public AudioSource AudioSource;
 
     private EnemyFSM _FSM;
 
@@ -15,9 +19,9 @@ public class Enemy : Character
         _model = new EnemyModel();
 
         _model.Name = InitializeName;
-        _model.MaxHealth = new ReactiveProperty<int>(100);
+        _model.MaxHealth = new ReactiveProperty<int>(InitializeHealth);
         _model.CurrentHealth = new ReactiveProperty<int>(MaxHealth.CurrentValue);
-        _model.AttackDamage = new ReactiveProperty<int>(12);
+        _model.AttackDamage = new ReactiveProperty<int>(InitializeDamage);
         _model.AttackSpeed = new ReactiveProperty<float>(1f);
 
         _view = GetComponent<EnemyView>();
@@ -28,6 +32,8 @@ public class Enemy : Character
         _FSM.InitializeState(new EnemyFSMState_Fight(_FSM));
 
         _FSM.SwitchState<EnemyFSMState_Idle>();
+
+        _FSM.AnimatorEvents.OnDamage += () => AudioSource.Play();
 
         this.UpdateAsObservable().Subscribe(_ => _FSM.Update()).AddTo(this);
         this.OnDisableAsObservable().Subscribe(_ => _FSM.CurrentState.Exit()).AddTo(this);
@@ -43,6 +49,7 @@ public class Enemy : Character
 
     protected override void Die()
     {
+        OnDeath?.Invoke();
         Destroy(gameObject);
     }
 }

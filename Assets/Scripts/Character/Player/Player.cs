@@ -13,6 +13,9 @@ public class Player : Character
     private PlayerFSM _FSM;
     public Action OnWin;
 
+    public AudioSource AttackSound;
+    public AudioSource BlockSound;
+
     public override void Initialize()
     {
         _model = new PlayerModel();
@@ -59,6 +62,8 @@ public class Player : Character
 
     public override void TakeDamage(int damage)
     {
+        _FSM.Player.OnDamageReceive?.Invoke(damage);
+
         if (_FSM.CurrentState is PlayerFSMState_Defense)
             return;
 

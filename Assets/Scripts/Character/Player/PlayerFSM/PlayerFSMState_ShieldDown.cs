@@ -8,8 +8,6 @@ public class PlayerFSMState_ShieldDown : PlayerFSMState
 {
     public PlayerFSMState_ShieldDown(PlayerFSM FSM) : base(FSM) { }
 
-    private float _timer;
-
     public override void Enter()
     {
         _FSM.AnimatorEvents.OnAnimationEnd += EndDefense;
