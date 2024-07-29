@@ -19,6 +19,11 @@ public class PlayerFSMState_CheckRoad : PlayerFSMState
             _FSM.Model.TargetCharacter = playerPosition.NextTile.Character;
             _FSM.SwitchState<PlayerFSMState_Fight>();
         }
+        else if (playerPosition.NextTile.Chest is Chest)
+        {
+            _FSM.Player.OnWin.Invoke();
+            return;
+        }
         else
             _FSM.SwitchState<PlayerFSMState_MoveToNextTile>();
     }

@@ -10,8 +10,6 @@ public class PlayerFSMState_Fight : PlayerFSMState
 
     public override void Enter()
     {
-        _FSM.Model.TargetCharacter.OnDamageDealt += TakeDamage;
-
         _FSM.Attack.performed += MakeDefaultAttack;
         _FSM.Defence.performed += ShieldUp;
     }
@@ -36,19 +34,7 @@ public class PlayerFSMState_Fight : PlayerFSMState
     {
         if (_FSM.Model.TargetCharacter == null)
         {
-            _FSM.Model.TargetCharacter.OnDamageDealt -= TakeDamage;
             _FSM.SwitchState<PlayerFSMState_MoveToNextTile>();
         }
-    }
-
-    private void TakeDamage(Character character, int damage)
-    {
-        if (character != _FSM.Player)
-            return;
-
-        if (_FSM.CurrentState is PlayerFSMState_Defense)
-            return;
-
-        _FSM.Model.CurrentHealth.Value -= damage;
     }
 }

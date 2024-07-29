@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using R3;
 using System.Threading;
+using UnityEngine.SceneManagement;
 
 public class PlayerView : CharacterView
 {
@@ -17,6 +18,16 @@ public class PlayerView : CharacterView
     private TextMeshProUGUI _TargetName;
     [SerializeField]
     private Slider _TargetHealthBar;
+
+    [SerializeField]
+    private GameObject DeathScreen;
+    [SerializeField]
+    private Button DeathRestartButton;
+
+    [SerializeField]
+    private GameObject WinScreen;
+    [SerializeField]
+    private Button WinRestartButton;
 
     public override void Initialize(Character player)
     {
@@ -38,6 +49,16 @@ public class PlayerView : CharacterView
                 HideTargetStats();
 
         }).AddTo(this);
+
+        DeathScreen.SetActive(false);
+        DeathRestartButton.onClick.AddListener(() => SceneManager.LoadScene(Scenes.GAMEPLAY));
+
+        player.OnDeath += ShowDeathScreen;
+
+        WinScreen.SetActive(false);
+        WinRestartButton.onClick.AddListener(() => SceneManager.LoadScene(Scenes.GAMEPLAY));
+
+        (_character as Player).OnWin += ShowWinScreen;
     }
 
     private void SubscribeToTarget(Character target)
@@ -58,5 +79,17 @@ public class PlayerView : CharacterView
     {
         _TargetName.gameObject.SetActive(true);
         _TargetHealthBar.gameObject.SetActive(true);
+    }
+
+    private void ShowDeathScreen()
+    {
+        _character.OnDeath -= ShowDeathScreen;
+        DeathScreen.SetActive(true);
+    }
+
+    private void ShowWinScreen()
+    {
+        (_character as Player).OnWin -= ShowWinScreen;
+        WinScreen.SetActive(true);
     }
 }

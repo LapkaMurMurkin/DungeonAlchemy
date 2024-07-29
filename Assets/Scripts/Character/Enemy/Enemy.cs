@@ -32,4 +32,17 @@ public class Enemy : Character
         this.UpdateAsObservable().Subscribe(_ => _FSM.Update()).AddTo(this);
         this.OnDisableAsObservable().Subscribe(_ => _FSM.CurrentState.Exit()).AddTo(this);
     }
+
+    public override void TakeDamage(int damage)
+    {
+        _FSM.Model.CurrentHealth.Value -= damage;
+
+        if (CurrentHealth.CurrentValue <= 0)
+            Die();
+    }
+
+    protected override void Die()
+    {
+        Destroy(gameObject);
+    }
 }

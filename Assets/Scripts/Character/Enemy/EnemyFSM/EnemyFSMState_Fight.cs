@@ -11,7 +11,7 @@ public class EnemyFSMState_Fight : EnemyFSMState
 
     public override void Enter()
     {
-        _FSM.Model.TargetCharacter.OnDamageDealt += TakeDamage;
+        _FSM.Model.TargetCharacter.OnDeath += Exit;
         _FSM.AnimatorEvents.OnDamage += SendDamage;
 
         _FSM.Animator.SetTrigger("Fight");
@@ -19,20 +19,12 @@ public class EnemyFSMState_Fight : EnemyFSMState
 
     public override void Exit()
     {
-        _FSM.Model.TargetCharacter.OnDamageDealt -= TakeDamage;
+        _FSM.Model.TargetCharacter.OnDeath -= Exit;
         _FSM.AnimatorEvents.OnDamage -= SendDamage;
     }
 
     private void SendDamage()
     {
-        _FSM.Enemy.OnDamageDealt?.Invoke(_FSM.Model.TargetCharacter, _FSM.Model.AttackDamage.CurrentValue);
-    }
-
-    private void TakeDamage(Character character, int damage)
-    {
-        if (character != _FSM.Enemy)
-            return;
-
-        _FSM.Model.CurrentHealth.Value -= damage;
+        _FSM.Enemy.TargetCharacter.TakeDamage(_FSM.Enemy.AttackDamage.CurrentValue);
     }
 }

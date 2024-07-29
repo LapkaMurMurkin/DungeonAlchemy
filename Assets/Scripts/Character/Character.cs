@@ -23,13 +23,13 @@ public abstract class Character : MonoBehaviour
     public Tile PositionOnRoad => _model.PositionOnRoad;
     public Character TargetCharacter => _model.TargetCharacter;
 
-    public Action<Character, int> OnDamageDealt;
+    public Action<int> OnDamageDealt;
     public Action<int> OnDamageReceive;
+    public Action OnDeath;
 
     public abstract void Initialize();
 
-    public static implicit operator Observable<object>(Character v)
-    {
-        throw new NotImplementedException();
-    }
+    public abstract void TakeDamage(int damage);
+    protected abstract void Die();
+
 }

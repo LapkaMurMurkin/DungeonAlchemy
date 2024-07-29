@@ -23,8 +23,7 @@ public class PlayerFSMState_DefaultAttack : PlayerFSMState
 
     private void SendDamage()
     {
-        _FSM.Player.OnDamageDealt?.Invoke(_FSM.Model.TargetCharacter, _FSM.Model.AttackDamage.CurrentValue);
-        //_FSM.Model.TargetCharacter.TakeDamage(_FSM.Model.AttackDamage.CurrentValue);
+        _FSM.Model.TargetCharacter.TakeDamage(_FSM.Player.AttackDamage.CurrentValue);
     }
 
     private void EndAttack()
