@@ -44,20 +44,14 @@ public class PlayerView : CharacterView
             {
                 SubscribeToTarget(target);
                 ShowTargetStats();
+                player.TargetCharacter.OnDeath += HideTargetStats;
             }
-            else
-                HideTargetStats();
-
         }).AddTo(this);
 
-        DeathScreen.SetActive(false);
         DeathRestartButton.onClick.AddListener(() => SceneManager.LoadScene(Scenes.GAMEPLAY));
-
         player.OnDeath += ShowDeathScreen;
 
-        WinScreen.SetActive(false);
         WinRestartButton.onClick.AddListener(() => SceneManager.LoadScene(Scenes.GAMEPLAY));
-
         (_character as Player).OnWin += ShowWinScreen;
     }
 
@@ -73,12 +67,15 @@ public class PlayerView : CharacterView
     {
         _TargetName.gameObject.SetActive(true);
         _TargetHealthBar.gameObject.SetActive(true);
+        _TargetName.transform.parent.gameObject.SetActive(true);
     }
 
     private void HideTargetStats()
     {
-        _TargetName.gameObject.SetActive(true);
-        _TargetHealthBar.gameObject.SetActive(true);
+        _character.TargetCharacter.OnDeath -= HideTargetStats;
+        _TargetName.gameObject.SetActive(false);
+        _TargetHealthBar.gameObject.SetActive(false);
+        _TargetName.transform.parent.gameObject.SetActive(false);
     }
 
     private void ShowDeathScreen()

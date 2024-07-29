@@ -10,6 +10,7 @@ public class PlayerFSMState_DefaultAttack : PlayerFSMState
 
     public override void Enter()
     {
+        _FSM.Player.AttackSound.Play();
         _FSM.AnimatorEvents.OnDamage += SendDamage;
         _FSM.AnimatorEvents.OnAnimationEnd += EndAttack;
         _FSM.Animator.SetTrigger("Attack");

@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.Timeline;
@@ -12,12 +13,14 @@ public class PlayerFSMState_Defense : PlayerFSMState
 
     public override void Enter()
     {
+        _FSM.Player.OnDamageReceive += Block;
         _FSM.AnimatorEvents.OnShieldDown += ShieldDown;
         _FSM.Player.StartCoroutine(DefenseTime(_duration));
     }
 
     public override void Exit()
     {
+        _FSM.Player.OnDamageReceive -= Block;
         _FSM.AnimatorEvents.OnShieldDown -= ShieldDown;
     }
 
@@ -27,8 +30,15 @@ public class PlayerFSMState_Defense : PlayerFSMState
         _FSM.Animator.SetTrigger("ShieldDown");
     }
 
+    private void Block(int damage)
+    {
+        _FSM.Animator.Play("Block");
+        _FSM.Player.BlockSound.Play();
+    }
+
     private void ShieldDown()
     {
+        _FSM.Animator.ResetTrigger("ShieldDown");
         _FSM.SwitchState<PlayerFSMState_ShieldDown>();
     }
 }
