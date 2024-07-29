@@ -6,6 +6,8 @@ public class GameplaySceneLoader : MonoBehaviour
 {
     public static ServiceLocator ServiceLocator = new ServiceLocator();
 
+    public AlchemyInitializer AlchemyInitializer;
+    
     private ActionMap _actionMap;
 
     private Road _road;
@@ -18,6 +20,7 @@ public class GameplaySceneLoader : MonoBehaviour
     private void Awake()
     {
         ServiceLocator = new ServiceLocator();
+        AlchemyInitializer.Init();
 
         _actionMap = new ActionMap();
         _actionMap.Enable();

@@ -1,7 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f3df9d2d-d8fb-4883-8a72-8627cee2af01" name="Changes" comment="merge11" />
+    <list default="true" id="f3df9d2d-d8fb-4883-8a72-8627cee2af01" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Alchemy Database [Not Finished].meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Alchemy Database [Not Finished]/DatabaseEntryView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Alchemy Database [Not Finished]/DatabaseEntryView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Alchemy Database [Not Finished]/DatabaseView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Alchemy Database [Not Finished]/DatabaseView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Alchemy Database [Not Finished]/PotionsDatabase.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Alchemy Database [Not Finished]/PotionsDatabase.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/AlchemyData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/AlchemyData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/AlchemyInitializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/AlchemyInitializer.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/AlchemyUtils.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/AlchemyUtils.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Cauldron.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Cauldron.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/CookingElement.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/CookingElement.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/ItemCauldronDropReceiver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/ItemCauldronDropReceiver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Views.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Views/CauldronButton.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Views/CauldronButton.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Views/CauldronElementsRatioView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Views/CauldronElementsRatioView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Views/CauldronTimerView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Views/CauldronTimerView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Views/MeasuringTubeView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Cooking/Views/MeasuringTubeView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Integration.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Integration/PotionActor.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Integration/PotionActor.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Integration/PotionZoneDropReceiver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Integration/PotionZoneDropReceiver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemDragging.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemDragging/DraggableTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemDragging/DraggableTrigger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemDragging/ItemDragger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemDragging/ItemDragger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/AbstractItem.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/AbstractItem.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/EffectsLogic.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/EffectsLogic/EffectLogic.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/EffectsLogic/EffectLogic.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/ItemStack.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/ItemStack.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items/Element.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items/Element.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items/Ingredient.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items/Ingredient.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items/Potion.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items/Potion.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items/PotionEffect.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items/PotionEffect.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items/PotionFormula.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/ItemsData/Items/PotionFormula.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/ItemAdder.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/ItemAdder.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/ItemStorage.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/ItemStorage.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Slot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Slot.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/StorageData.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/StorageData.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Storagies.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Storagies/ConcreteStorages.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Storagies/ConcreteStorages/IngredientInventory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Storagies/ConcreteStorages/IngredientInventory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Storagies/ConcreteStorages/PotionInventory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Storagies/ConcreteStorages/PotionInventory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Storagies/Inventory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Storagies/Inventory.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/ItemStorageView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/ItemStorageView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/Slots.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/Slots/IngredientSlotView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/Slots/IngredientSlotView.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/Slots/ItemCard.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/Slots/ItemCard.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/Slots/SlotDropReceiver.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/Slots/SlotDropReceiver.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/Slots/SlotView.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/Slots/SlotView.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonAlchemy/.idea/shelf/Uncommitted_changes_before_Update_at_26_07_2024_19_38__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonAlchemy/.idea/shelf/Uncommitted_changes_before_Update_at_26_07_2024_19_38__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.DungeonAlchemy/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.DungeonAlchemy/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/Icon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/ObservableCollections.nuspec" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/ObservableCollections.nuspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/ObservableCollections.nuspec.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/ObservableCollections.nuspec.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/lib.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/lib.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/lib/netstandard2.1.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/lib/netstandard2.1.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/lib/netstandard2.1/ObservableCollections.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/lib/netstandard2.1/ObservableCollections.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/lib/netstandard2.1/ObservableCollections.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.2.1.3/lib/netstandard2.1/ObservableCollections.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/Icon.png.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/Icon.png.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/ObservableCollections.R3.nuspec" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/ObservableCollections.R3.nuspec" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/ObservableCollections.R3.nuspec.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/ObservableCollections.R3.nuspec.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/lib.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/lib.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/lib/netstandard2.1.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/lib/netstandard2.1.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/lib/netstandard2.1/ObservableCollections.R3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/lib/netstandard2.1/ObservableCollections.R3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/lib/netstandard2.1/ObservableCollections.R3.xml.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Packages/ObservableCollections.R3.2.1.3/lib/netstandard2.1/ObservableCollections.R3.xml.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Fallback.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/TextMesh Pro/Resources/Fonts &amp; Materials/LiberationSans SDF - Outline.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/GameplaySceneLoader.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/GameplaySceneLoader.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Templates/ServiceLocator.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Templates/ServiceLocator.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,79 +129,42 @@
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/ART.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/Microsoft.Bcl.TimeProvider.8.0.1/Icon.png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/Microsoft.Bcl.TimeProvider.8.0.1/Icon.png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/Icon.png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/Icon.png.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/R3.nuspec.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/R3.nuspec.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/R3.nuspec.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/R3.nuspec.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.dll.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.dll.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.dll.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.dll.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/R3.1.2.1/lib/netstandard2.1/R3.xml.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/System.Threading.Channels.8.0.0/buildTransitive/net6.0.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Packages/System.Threading.Channels.8.0.0/buildTransitive/net6.0.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Scenes/Gameplay.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Scenes/Gameplay.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Scenes/Gameplay.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Scenes/Gameplay.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/43/431a295e/IList`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/ec/3e51d190/Void.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b5d35db3b9684f5a8e4bb17d1f8852608ec00/b8/b1d01250/ReactiveProperty`1.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/bd47638cc67448758ccc5a6728ec05cf3dc00/06/e36cf340/Dragger.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Alchemy/Storage/Views/Slots/ItemCard.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/GameplaySceneLoader.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Templates/FollowCursorUI.cs" root0="FORCE_HIGHLIGHTING" />
-    <setting file="mock://Q:/UnityDevelopment/DungeonAlchemy/Assets/Scripts/Templates/MVVM.meta" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.r3@378fa771fc/Runtime/MonoBehaviourExtensions.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.r3@378fa771fc/Runtime/UnityTimeProvider.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.cysharp.r3@0bb5be4b88/Runtime/UnityProviderInitializer.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.render-pipelines.core@14.0.11/Runtime/Common/ObservableList.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/EventSystem/EventData/PointerEventData.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.visualscripting@1.9.4/Runtime/VisualScripting.Flow/Framework/Formula.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2jmUL0F5LIBUW7XAQQliZgUXZP2" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="autoscrollToSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;RiderCSharpFileTemplatesSettingsId&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
     <configuration name="UnitTests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
       <option name="EXE_PATH" value="Q:\Programs\Unity\Editors\2022.3.37f1-x86_64\Editor\Unity.exe" />
@@ -128,6 +204,11 @@
       <option name="presentableId" value="Default" />
       <updated>1721991726450</updated>
       <workItem from="1721991780998" duration="4787000" />
+      <workItem from="1721996642059" duration="11076000" />
+      <workItem from="1722031560517" duration="27338000" />
+      <workItem from="1722088642243" duration="7223000" />
+      <workItem from="1722164860671" duration="12143000" />
+      <workItem from="1722239989850" duration="10353000" />
     </task>
     <task id="LOCAL-00001" summary="working">
       <created>1721993839992</created>
@@ -136,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1721993839992</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="мы не знаем что это такое если бы знали что это такое">
+      <created>1721996936981</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1721996936981</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -173,6 +261,11 @@
     <MESSAGE value="working" />
     <MESSAGE value="merge" />
     <MESSAGE value="merge11" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge11" />
+    <MESSAGE value="мы не знаем что это такое если бы знали что это такое" />
+    <option name="LAST_COMMIT_MESSAGE" value="мы не знаем что это такое если бы знали что это такое" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

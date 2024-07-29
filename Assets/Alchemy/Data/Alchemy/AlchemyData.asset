@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ab91aa5695840de92d8d4246bd09db5, type: 3}
+  m_Name: AlchemyData
+  m_EditorClassIdentifier: 
+  <Elements>k__BackingField:
+  - {fileID: 11400000, guid: 71fc78541f8ea9f488e8d962902b8d09, type: 2}
+  - {fileID: 11400000, guid: 17e15f6eed9eb2b4fa68888e0692b0df, type: 2}
+  - {fileID: 11400000, guid: f1ab9fba0a457d74692032c9484321e5, type: 2}
+  <PotionFormulas>k__BackingField:
+  - {fileID: 11400000, guid: 6f1aaf6c381db314b98b756f11256cda, type: 2}
+  - {fileID: 11400000, guid: d43d0d585a61d0d49b0f3bf2b56077a5, type: 2}

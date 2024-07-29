@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8520e302367496a9c2ddaad0f9359c0, type: 3}
+  m_Name: BluePotionFormula
+  m_EditorClassIdentifier: 
+  <Sprite>k__BackingField: {fileID: 0}
+  <Name>k__BackingField: Blue Potion Formula
+  <Description>k__BackingField: What it does is...
+  <IsStackable>k__BackingField: 0
+  <ElementsForCooking>k__BackingField:
+  - Item: {fileID: 11400000, guid: 71fc78541f8ea9f488e8d962902b8d09, type: 2}
+    Quantity: 1
+  <Potion>k__BackingField: {fileID: 11400000, guid: a37263c8e19354b48b740f905ac45d55, type: 2}
