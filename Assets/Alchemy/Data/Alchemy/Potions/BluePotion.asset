@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8c0b9d5fe0646b5aa3d96efd0ed784f, type: 3}
+  m_Name: BluePotion
+  m_EditorClassIdentifier: 
+  <Sprite>k__BackingField: {fileID: 21300000, guid: d3e97c1d055f907488ee9a99549ba79d, type: 3}
+  <Name>k__BackingField: Red Potion
+  <Description>k__BackingField: What it does is...
+  <IsStackable>k__BackingField: 0
+  <PotionEffects>k__BackingField: []

@@ -6,6 +6,8 @@ public class GameplaySceneLoader : MonoBehaviour
 {
     public static ServiceLocator ServiceLocator = new ServiceLocator();
 
+    public AlchemyInitializer AlchemyInitializer;
+    
     private ActionMap _actionMap;
 
     private Player _player;
@@ -15,16 +17,17 @@ public class GameplaySceneLoader : MonoBehaviour
     private void Awake()
     {
         ServiceLocator = new ServiceLocator();
-
-        _actionMap = new ActionMap();
-        _actionMap.Enable();
-        ServiceLocator.Register<ActionMap>(_actionMap);
-
-        _player = FindObjectOfType<Player>();
-        _player.Initialize();
-
-        _enemy = FindObjectOfType<Enemy>();
-        _enemy.Initialize();
+        AlchemyInitializer.Init();
+        
+        // _actionMap = new ActionMap();
+        // _actionMap.Enable();
+        // ServiceLocator.Register<ActionMap>(_actionMap);
+        //
+        // _player = FindObjectOfType<Player>();
+        // _player.Initialize();
+        //
+        // _enemy = FindObjectOfType<Enemy>();
+        // _enemy.Initialize();
     }
 }
 

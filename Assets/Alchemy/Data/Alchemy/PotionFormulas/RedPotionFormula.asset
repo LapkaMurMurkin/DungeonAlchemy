@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8520e302367496a9c2ddaad0f9359c0, type: 3}
+  m_Name: RedPotionFormula
+  m_EditorClassIdentifier: 
+  <Sprite>k__BackingField: {fileID: 0}
+  <Name>k__BackingField: Red Potion Formula
+  <Description>k__BackingField: Heals HP... usually.
+  <IsStackable>k__BackingField: 0
+  <ElementsForCooking>k__BackingField:
+  - Item: {fileID: 11400000, guid: 17e15f6eed9eb2b4fa68888e0692b0df, type: 2}
+    Quantity: 1
+  - Item: {fileID: 11400000, guid: f1ab9fba0a457d74692032c9484321e5, type: 2}
+    Quantity: 1
+  <Potion>k__BackingField: {fileID: 11400000, guid: f2b5020517eda414c946d81d0c18da64, type: 2}
