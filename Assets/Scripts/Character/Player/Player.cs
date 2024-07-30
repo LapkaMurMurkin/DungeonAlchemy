@@ -13,8 +13,11 @@ public class Player : Character
     private PlayerFSM _FSM;
     public Action OnWin;
 
+    public PotionZoneDropReceiver EnemyZone;
     public AudioSource AttackSound;
     public AudioSource BlockSound;
+
+    public Inventory Inventory;
 
     public override void Initialize()
     {
@@ -23,7 +26,7 @@ public class Player : Character
         _model.Name = "MegaWarrior";
         _model.MaxHealth = new ReactiveProperty<int>(100);
         _model.CurrentHealth = new ReactiveProperty<int>(MaxHealth.CurrentValue);
-        _model.AttackDamage = new ReactiveProperty<int>(50);
+        _model.AttackDamage = new ReactiveProperty<int>(5);
         _model.AttackSpeed = new ReactiveProperty<float>(1f);
         _model.PositionOnRoad = ServiceLocator.Get<Road>().Tiles.Find(tile => tile.Character == this);
         _model.TargetCharacter = _model.PositionOnRoad.NextTile.Character;
@@ -43,6 +46,24 @@ public class Player : Character
         this.OnDisableAsObservable().Subscribe(_ => Disable()).AddTo(this);
 
         Enable();
+    }
+
+    public override void IncreaseDamageEffect(int increaseValue)
+    {
+        _model.AttackDamage.Value += increaseValue;
+    }
+
+    public override void IncreaseMaxHealthEffect(int increaseValue)
+    {
+        _model.MaxHealth.Value += increaseValue;
+    }
+
+    public override void Heal(int heal)
+    {
+        _model.CurrentHealth.Value += heal;
+
+        if (CurrentHealth.CurrentValue > MaxHealth.CurrentValue)
+            _model.CurrentHealth.Value = MaxHealth.CurrentValue;
     }
 
     private void Enable()

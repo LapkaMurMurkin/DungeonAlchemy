@@ -6,9 +6,15 @@ using UnityEngine.UI;
 using R3;
 using System.Threading;
 using UnityEngine.SceneManagement;
+using System.Linq;
 
 public class PlayerView : CharacterView
 {
+    [SerializeField]
+    private TextMeshProUGUI _playerHealthStat;
+    [SerializeField]
+    private TextMeshProUGUI _playerDamageStat;
+
     [SerializeField]
     private TextMeshProUGUI _PlayerName;
     [SerializeField]
@@ -32,6 +38,9 @@ public class PlayerView : CharacterView
     public override void Initialize(Character player)
     {
         _character = player;
+
+        player.MaxHealth.Merge(player.CurrentHealth).Subscribe(_ => _playerHealthStat.text = $"Health: {player.CurrentHealth} \\ {player.MaxHealth}").AddTo(this);
+        player.AttackDamage.Subscribe(value => _playerDamageStat.text = $"Damage: {value.ToString()}").AddTo(this);
 
         _PlayerName.text = _character.Name;
         _PlayerHealthBar.minValue = 0;
@@ -72,6 +81,20 @@ public class PlayerView : CharacterView
 
     private void HideTargetStats()
     {
+        List<Slot> ingredients = (_character as Player).Inventory.Storage.Slots.ToList();
+
+        foreach (Slot ingredient in ingredients)
+        {
+            if (ingredient.Item.Value.name.Equals("Ingredient 1"))
+                ingredient.Quantity.Value += 4;
+
+            if (ingredient.Item.Value.name.Equals("Ingredient 2"))
+                ingredient.Quantity.Value += 2;
+
+            if (ingredient.Item.Value.name.Equals("Ingredient 3"))
+                ingredient.Quantity.Value += 1;
+        }
+
         _character.TargetCharacter.OnDeath -= HideTargetStats;
         _TargetName.gameObject.SetActive(false);
         _TargetHealthBar.gameObject.SetActive(false);

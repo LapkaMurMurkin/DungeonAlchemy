@@ -17,7 +17,7 @@ public class Potion : AbstractItem
 
         foreach (var potionEffect in PotionEffects)
         {
-            potionEffect.Behaviour.Trigger(data);
+            potionEffect.Trigger(data);
         }
     }
     

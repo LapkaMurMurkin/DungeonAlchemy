@@ -16,4 +16,5 @@ MonoBehaviour:
   <Name>k__BackingField: Red Potion
   <Description>k__BackingField: Heals HP... usually.
   <IsStackable>k__BackingField: 0
-  <PotionEffects>k__BackingField: []
+  <PotionEffects>k__BackingField:
+  - {fileID: 11400000, guid: efe014f0721a02a4f9b0f31c1cbd9472, type: 2}
