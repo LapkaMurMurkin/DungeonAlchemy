@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: BluePotion
   m_EditorClassIdentifier: 
   <Sprite>k__BackingField: {fileID: 21300000, guid: d3e97c1d055f907488ee9a99549ba79d, type: 3}
-  <Name>k__BackingField: Red Potion
+  <Name>k__BackingField: Blue Potion
   <Description>k__BackingField: What it does is...
   <IsStackable>k__BackingField: 0
-  <PotionEffects>k__BackingField: []
+  <PotionEffects>k__BackingField:
+  - {fileID: 11400000, guid: 9baf2b71a2ca4fb4dac8b0e4b985a86b, type: 2}

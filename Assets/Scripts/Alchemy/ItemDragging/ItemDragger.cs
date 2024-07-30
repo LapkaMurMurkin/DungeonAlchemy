@@ -6,7 +6,7 @@ public class ItemDragger : MonoBehaviour
     public Canvas WorldCanvas;
     public ItemCard DragAndDropPrefab;
     public Transform Container;
-    
+
     private ItemCard _itemInstance;
     private RectTransform _rectTransform;
     private Slot _slot;
@@ -15,7 +15,7 @@ public class ItemDragger : MonoBehaviour
     private bool _dropReceived;
 
     private bool _dragStarted;
-    
+
     public void DragStarted(DraggableTrigger draggableTrigger, Slot slot, PointerEventData eventData)
     {
         _slot = slot;
@@ -24,7 +24,7 @@ public class ItemDragger : MonoBehaviour
         _itemStack.Item = slot.Item.Value;
         _itemStack.Quantity = slot.Inventory.Storage.RemoveOneItem(slot.Item.Value);
         slot.IsLocked = true;
-        
+
         _itemInstance = Instantiate(DragAndDropPrefab, Container);
         _itemInstance.Image.sprite = _itemStack.Item.Sprite;
         _itemInstance.QuantityTMP.text = $"1";
@@ -33,11 +33,11 @@ public class ItemDragger : MonoBehaviour
 
         _rectTransform = _itemInstance.GetComponent<RectTransform>();
         _rectTransform.position = draggableTrigger.transform.position;
-        
+
         _dropReceived = false;
         _dragStarted = true;
     }
-    
+
     public void Drag(DraggableTrigger draggableTrigger, PointerEventData eventData)
     {
         if (!_dragStarted) return;
@@ -52,6 +52,7 @@ public class ItemDragger : MonoBehaviour
         {
             from.Quantity.Value = 0;
             potion.Apply(caster, target);
+            _dropReceived = true;
         }
     }
 
@@ -59,10 +60,10 @@ public class ItemDragger : MonoBehaviour
     {
         if (!_dragStarted) return;
         if (from != _slot) return;
-        
+
         if (to.Item.Value == null || (to.Item.Value != null && !to.Item.Value.IsStackable))
             Slot.Swap(to, from);
-        
+
         _dropReceived = to.Add(_itemStack.Item, _itemStack.Quantity) == 1;
     }
 
@@ -81,10 +82,10 @@ public class ItemDragger : MonoBehaviour
         _itemInstance.GetComponent<Canvas>().overrideSorting = false;
         Destroy(_itemInstance.gameObject);
 
-        _slot.IsLocked = false; 
+        _slot.IsLocked = false;
         if (!_dropReceived)
             _slot.Inventory.Storage.AddItemQuantity(_itemStack.Item, 1);
-        
+
         _slot = null;
         _dragStarted = false;
     }

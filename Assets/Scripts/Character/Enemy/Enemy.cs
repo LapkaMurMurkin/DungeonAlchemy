@@ -39,6 +39,24 @@ public class Enemy : Character
         this.OnDisableAsObservable().Subscribe(_ => _FSM.CurrentState.Exit()).AddTo(this);
     }
 
+    public override void IncreaseDamageEffect(int increaseValue)
+    {
+        _model.AttackDamage.Value += increaseValue;
+    }
+
+    public override void IncreaseMaxHealthEffect(int increaseValue)
+    {
+        _model.MaxHealth.Value += increaseValue;
+    }
+
+    public override void Heal(int heal)
+    {
+        _model.CurrentHealth.Value += heal;
+
+        if (CurrentHealth.CurrentValue > MaxHealth.CurrentValue)
+            _model.CurrentHealth.Value = MaxHealth.CurrentValue;
+    }
+
     public override void TakeDamage(int damage)
     {
         _FSM.Model.CurrentHealth.Value -= damage;

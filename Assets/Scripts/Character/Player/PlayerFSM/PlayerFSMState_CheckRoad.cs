@@ -17,6 +17,7 @@ public class PlayerFSMState_CheckRoad : PlayerFSMState
         if (playerPosition.NextTile.Character is Enemy)
         {
             _FSM.Model.TargetCharacter = playerPosition.NextTile.Character;
+            _FSM.Player.EnemyZone._target = playerPosition.NextTile.Character.GetComponent<PotionActor>();
             _FSM.SwitchState<PlayerFSMState_Fight>();
         }
         else if (playerPosition.NextTile.Chest is Chest)
