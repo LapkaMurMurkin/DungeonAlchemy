@@ -9,7 +9,7 @@ public class PotionsDatabase
     {
         foreach (var formula in data.PotionFormulas)
         {
-            string FormulaRatio = AlchemyUtils.GetRatioString(CalculateFormulaRatio(formula));
+            string FormulaRatio = AlchemyUtils.GetRatioString(formula);
             _potionRatios.Add(FormulaRatio, formula.Potion);
             Debug.Log($"{formula.Potion.Name}: {FormulaRatio}");
         }
@@ -24,24 +24,5 @@ public class PotionsDatabase
         
         Debug.Log("Potion Not Found");
         return null;
-    }
-
-    private CookingElement[] CalculateFormulaRatio(PotionFormula formula)
-    {
-        CookingElement[] elements = new CookingElement[formula.ElementsForCooking.Count];
-        int totalElements = 0;
-        for (var i = 0; i < formula.ElementsForCooking.Count; i++)
-        {
-            var elementStack = formula.ElementsForCooking[i];
-            elements[i] = new CookingElement(elementStack.Item);
-            elements[i].Quantity = elementStack.Quantity;
-            
-            totalElements += elementStack.Quantity;
-        }
-        
-        foreach (var element in elements)
-            element.Ratio = element.Quantity * 1f / totalElements   ;
-
-        return elements;
     }
 }

@@ -20,7 +20,6 @@ public class Inventory : MonoBehaviour
     {
         Storage.Slots.ObserveAdd().Subscribe(slot => slot.Value.Inventory = this);
         
-        
         View.Init(Storage);
         Storage.Init(StorageData);
     }

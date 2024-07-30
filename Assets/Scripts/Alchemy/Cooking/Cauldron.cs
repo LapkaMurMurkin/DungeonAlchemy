@@ -18,7 +18,7 @@ public class Cauldron : MonoBehaviour
     private AlchemyData _data;
     private PotionsDatabase _database;
 
-    private bool IsCooking => _timeLeft.Value > 0f;
+    public bool IsCooking => _timeLeft.Value > 0f;
     private ReactiveProperty<float> _timeLeft = new ReactiveProperty<float>();
 
     public Dictionary<Element, CookingElement> Elements => _elements;
