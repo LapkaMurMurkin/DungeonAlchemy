@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3a822b15f2a4cd5b9c1331e12f874e0, type: 3}
   m_Name: Blue Element
   m_EditorClassIdentifier: 
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 00c22c192c8d003409a89e4a9fde45b9, type: 3}
+  <Sprite>k__BackingField: {fileID: 21300000, guid: f749fe61e20c5d54d8157fef164b00f5, type: 3}
   <Name>k__BackingField: Blue
   <Description>k__BackingField: 
   <IsStackable>k__BackingField: 1

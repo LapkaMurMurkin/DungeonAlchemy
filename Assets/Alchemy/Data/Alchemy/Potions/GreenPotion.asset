@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8c0b9d5fe0646b5aa3d96efd0ed784f, type: 3}
-  m_Name: YellowPotion
+  m_Name: GreenPotion
   m_EditorClassIdentifier: 
-  <Sprite>k__BackingField: {fileID: 21300000, guid: abfe4d2734a6a5948885379c27861cf1, type: 3}
-  <Name>k__BackingField: Yellow Potion
-  <Description>k__BackingField: I feel stronger
+  <Sprite>k__BackingField: {fileID: 21300000, guid: 7c9229a7826b57045ac988fc5c9489c5, type: 3}
+  <Name>k__BackingField: Green Potion
+  <Description>k__BackingField: Your mother-in-law's soup
   <IsStackable>k__BackingField: 0
   <PotionEffects>k__BackingField:
-  - {fileID: 11400000, guid: 49c0581d795e2a640ac4c659e4d8aad1, type: 2}
+  - {fileID: 11400000, guid: 29921e749154fed4b9e9933b68e5323c, type: 2}

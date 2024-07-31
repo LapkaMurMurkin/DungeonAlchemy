@@ -10,15 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d8520e302367496a9c2ddaad0f9359c0, type: 3}
-  m_Name: YellowPotionFormula
+  m_Name: GreenPotionFormula
   m_EditorClassIdentifier: 
   <Sprite>k__BackingField: {fileID: 0}
-  <Name>k__BackingField: Red Potion Formula
-  <Description>k__BackingField: I feel stronger
+  <Name>k__BackingField: Green Potion Formula
+  <Description>k__BackingField: Your mother-in-law's soup
   <IsStackable>k__BackingField: 0
   <ElementsForCooking>k__BackingField:
   - Item: {fileID: 11400000, guid: 71fc78541f8ea9f488e8d962902b8d09, type: 2}
     Quantity: 1
   - Item: {fileID: 11400000, guid: 17e15f6eed9eb2b4fa68888e0692b0df, type: 2}
     Quantity: 1
-  <Potion>k__BackingField: {fileID: 11400000, guid: 6e0096475c3c7be4bb1ac9a8c93857c0, type: 2}
+  - Item: {fileID: 11400000, guid: f1ab9fba0a457d74692032c9484321e5, type: 2}
+    Quantity: 1
+  <Potion>k__BackingField: {fileID: 11400000, guid: 1772d4cea2840f740be3b26559071bbf, type: 2}

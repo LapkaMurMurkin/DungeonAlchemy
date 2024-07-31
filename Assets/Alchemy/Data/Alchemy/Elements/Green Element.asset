@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f3a822b15f2a4cd5b9c1331e12f874e0, type: 3}
-  m_Name: Purple Element
+  m_Name: Green Element
   m_EditorClassIdentifier: 
-  <Sprite>k__BackingField: {fileID: 21300000, guid: 32d2a4cca7084f24b9d6842c1283514b, type: 3}
-  <Name>k__BackingField: Purple
+  <Sprite>k__BackingField: {fileID: 21300000, guid: db16eee3bfa2c3848a046180c26f82e3, type: 3}
+  <Name>k__BackingField: Green
   <Description>k__BackingField: 
   <IsStackable>k__BackingField: 1
-  <Color>k__BackingField: {r: 0.70485485, g: 0.12976135, b: 0.9169811, a: 1}
+  <Color>k__BackingField: {r: 0.29464775, g: 0.7509433, b: 0.11760049, a: 1}
