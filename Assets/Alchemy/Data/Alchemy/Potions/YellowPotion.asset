@@ -16,5 +16,6 @@ MonoBehaviour:
   <Name>k__BackingField: Yellow Potion
   <Description>k__BackingField: I feel stronger
   <IsStackable>k__BackingField: 0
+  StatID: 2
   <PotionEffects>k__BackingField:
   - {fileID: 11400000, guid: 49c0581d795e2a640ac4c659e4d8aad1, type: 2}

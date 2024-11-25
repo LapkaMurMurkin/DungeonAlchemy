@@ -48,24 +48,6 @@ public class Player : Character
         Enable();
     }
 
-    public override void IncreaseDamageEffect(int increaseValue)
-    {
-        _model.AttackDamage.Value += increaseValue;
-    }
-
-    public override void IncreaseMaxHealthEffect(int increaseValue)
-    {
-        _model.MaxHealth.Value += increaseValue;
-    }
-
-    public override void Heal(int heal)
-    {
-        _model.CurrentHealth.Value += heal;
-
-        if (CurrentHealth.CurrentValue > MaxHealth.CurrentValue)
-            _model.CurrentHealth.Value = MaxHealth.CurrentValue;
-    }
-
     private void Enable()
     {
         _model.TargetCharacter.OnDamageDealt += TakeDamage;

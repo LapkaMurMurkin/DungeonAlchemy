@@ -6,8 +6,10 @@ public class HealEffect : PotionEffect
 {
     public int value;
 
-    public override void Trigger(Potion.PotionCastData data)
+    public override void ApplyEffect(ReactiveProperty<int> stat)
     {
-        data.Target.GetComponent<Character>().Heal(value);
+        stat.Value += value;
+
+        //data.Target.GetComponent<Character>().Heal(value);
     }
 }

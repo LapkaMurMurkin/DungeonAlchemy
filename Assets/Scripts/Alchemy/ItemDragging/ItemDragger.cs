@@ -51,7 +51,8 @@ public class ItemDragger : MonoBehaviour
         if (_itemStack.Item is Potion potion)
         {
             from.Quantity.Value = 0;
-            potion.Apply(caster, target);
+            target.GetComponent<Character>().ApplyPotion(potion);
+            //potion.Apply(caster, target);
             _dropReceived = true;
         }
     }

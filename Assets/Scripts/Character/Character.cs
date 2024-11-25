@@ -29,12 +29,28 @@ public abstract class Character : MonoBehaviour
     public Action OnDeath;
 
     public abstract void Initialize();
-
-    public abstract void IncreaseDamageEffect(int increaseValue);
-    public abstract void IncreaseMaxHealthEffect(int increaseValue);
-    public abstract void Heal(int healValue);
-    //public abstract void ApplyEffect(PotionEffect potionEffect);
     public abstract void TakeDamage(int damageValue);
     protected abstract void Die();
+
+    public void ApplyPotion(Potion potion)
+    {
+        ReactiveProperty<int> stat = GetStatByID(potion.StatID);
+        potion.Use(stat);
+    }
+
+    private ReactiveProperty<int> GetStatByID(StatID ID)
+    {
+        switch (ID)
+        {
+            case StatID.MAX_HEALTH:
+                return _model.MaxHealth;
+            case StatID.CURRENT_HEALTH:
+                return _model.CurrentHealth;
+            case StatID.ATTACK_DAMAGE:
+                return _model.AttackDamage;
+            default:
+                return null;
+        }
+    }
 
 }

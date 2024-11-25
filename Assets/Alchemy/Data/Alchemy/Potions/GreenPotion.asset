@@ -16,5 +16,6 @@ MonoBehaviour:
   <Name>k__BackingField: Green Potion
   <Description>k__BackingField: Your mother-in-law's soup
   <IsStackable>k__BackingField: 0
+  StatID: 1
   <PotionEffects>k__BackingField:
   - {fileID: 11400000, guid: 29921e749154fed4b9e9933b68e5323c, type: 2}

@@ -6,8 +6,8 @@ public class IncreaseDamageEffect : PotionEffect
 {
     public int value;
 
-    public override void Trigger(Potion.PotionCastData data)
+    public override void ApplyEffect(ReactiveProperty<int> stat)
     {
-        data.Target.GetComponent<Character>().IncreaseDamageEffect(value);
+        stat.Value += value;
     }
 }

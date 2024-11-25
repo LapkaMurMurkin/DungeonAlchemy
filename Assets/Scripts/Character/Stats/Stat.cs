@@ -7,14 +7,14 @@ public class Stat
     public int BaseValue;
     public int ModifiedValue => CalculateModifiedValue();
 
-    private readonly List<StatModifier> statModifiers;
+    private readonly List<StatModifier> _statModifiers;
     public readonly IList<StatModifier> StatModifiers;
 
     public Stat(int baseValue)
     {
         BaseValue = baseValue;
-        statModifiers = new List<StatModifier>();
-        StatModifiers = statModifiers.AsReadOnly();
+        _statModifiers = new List<StatModifier>();
+        StatModifiers = _statModifiers.AsReadOnly();
     }
 
     private int CalculateModifiedValue()
@@ -22,7 +22,7 @@ public class Stat
         int flatModifierSum = 0;
         int percentModifierSum = 0;
 
-        foreach (StatModifier modifier in statModifiers)
+        foreach (StatModifier modifier in _statModifiers)
         {
             if (modifier.Type == StatModifierType.Flat)
                 flatModifierSum += modifier.Value;
@@ -36,11 +36,11 @@ public class Stat
 
     public void AddModifier(StatModifier modifier)
     {
-        statModifiers.Add(modifier);
+        _statModifiers.Add(modifier);
     }
 
     public void RemoveModifier(StatModifier modifier)
     {
-        statModifiers.Remove(modifier);
+        _statModifiers.Remove(modifier);
     }
 }

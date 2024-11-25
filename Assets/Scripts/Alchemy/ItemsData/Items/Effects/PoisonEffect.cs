@@ -6,8 +6,8 @@ public class PoisonEffect : PotionEffect
 {
     public int value;
 
-    public override void Trigger(Potion.PotionCastData data)
+    public override void ApplyEffect(ReactiveProperty<int> stat)
     {
-        data.Target.GetComponent<Character>().TakeDamage(value);
+        stat.Value -= value;
     }
 }
